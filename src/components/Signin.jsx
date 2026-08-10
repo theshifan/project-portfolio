@@ -15,9 +15,6 @@ function Signin() {
   const handleProfileClick = () =>{
     navigate('/home');
   }
-  const handleProfileClick1 = () =>{
-    navigate('/DevepHero')
-  }
   return (
     <div className={styles.container} id="signin">
       <h1 style={{"font-size": "3em","margin-bottom": "50px"}}>Who's Watching?</h1>
@@ -27,7 +24,7 @@ function Signin() {
           <Link to={"/head"}><img src={recuriter} alt="Recruiter" /></Link>
           <p>Recruiter</p>
         </div>
-        <div className={styles.profile} onClick={handleProfileClick1}>
+        <div className={styles.profile} >
           <Link to={"/head"}><img src={Deve} alt="Developer" /></Link>
           <p>Developer</p>
         </div>

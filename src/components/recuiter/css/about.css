@@ -1,0 +1,277 @@
+/* =========================
+   ABOUT PAGE
+========================= */
+
+.about-page {
+    min-height: 100vh;
+    width: 100%;
+    background: #111;
+    color: #f3f3f3;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.about-hero {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 140px 50px 100px;
+}
+
+
+/* TITLE */
+
+.about-title {
+    margin-bottom: 70px;
+}
+
+.about-label {
+    color: #e50914;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    margin: 0 0 15px;
+}
+
+.about-title h1 {
+    font-size: clamp(60px, 9vw, 130px);
+    line-height: 0.9;
+    margin: 0;
+    padding: 0;
+    font-weight: 800;
+}
+
+
+/* =========================
+   PROFILE
+========================= */
+
+.about-profile {
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+
+/* PHOTO */
+
+.about-photo {
+    width: 100%;
+    height: 520px;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #222;
+}
+
+.about-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* INTRO */
+
+.about-intro h2 {
+    font-size: clamp(35px, 4vw, 60px);
+    line-height: 1.05;
+    margin: 0 0 30px;
+}
+
+.about-intro p {
+    font-size: 21px;
+    line-height: 1.7;
+    color: #bbb;
+    max-width: 700px;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.about-section {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 100px 50px;
+
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 80px;
+
+    border-top: 1px solid #333;
+}
+
+
+/* SECTION TITLE */
+
+.about-section-title {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.about-section-title span {
+    color: #e50914;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.about-section-title h2 {
+    margin: 0;
+    font-size: 38px;
+}
+
+
+/* SECTION CONTENT */
+
+.about-section-content p {
+    max-width: 800px;
+
+    color: #bbb;
+
+    font-size: 19px;
+
+    line-height: 1.8;
+
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   JOURNEY
+========================= */
+
+.journey-line {
+    margin-top: 60px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.journey-line div {
+    border-left: 2px solid #e50914;
+
+    padding-left: 20px;
+}
+
+.journey-line strong {
+    display: block;
+
+    font-size: 28px;
+
+    margin-bottom: 8px;
+}
+
+.journey-line span {
+    color: #888;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   FINAL
+========================= */
+
+.about-final {
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 150px 30px;
+
+    text-align: center;
+}
+
+.about-final p {
+    color: #aaa;
+
+    font-size: 20px;
+
+    line-height: 1.7;
+}
+
+.about-final h2 {
+    font-size: clamp(45px, 7vw, 90px);
+
+    margin: 30px 0 0;
+
+    color: #e50914;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    .about-hero {
+        padding: 120px 25px 70px;
+    }
+
+    .about-profile {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .about-photo {
+        height: 450px;
+        max-width: 450px;
+    }
+
+    .about-section {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+        padding: 80px 25px;
+    }
+
+    .journey-line {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+    .about-title h1 {
+        font-size: 65px;
+    }
+
+    .about-photo {
+        height: 380px;
+    }
+
+    .about-intro h2 {
+        font-size: 38px;
+    }
+
+    .about-intro p {
+        font-size: 17px;
+    }
+
+    .about-section-content p {
+        font-size: 17px;
+    }
+
+}

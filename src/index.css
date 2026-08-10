@@ -1,390 +1,790 @@
-/* CSS VARIABLES */
+/* =========================
+   CSS VARIABLES
+========================= */
+
 :root {
-  --primary: #141414;
-  --light: #F3F3F3;
-  --dark: 	#686868;
+    --primary: #141414;
+    --light: #F3F3F3;
+    --dark: #686868;
 }
 
-html, body {
-  width: 100vw;
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-  background-color: var(--primary);
-  color: var(--light);
-  font-family: Arial, Helvetica, sans-serif;
-  box-sizing: border-box;
-  line-height: 1.4;
+
+/* =========================
+   GLOBAL
+========================= */
+
+html {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary);
+    color: var(--light);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+    overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 img {
-  max-width: 100%;
+    max-width: 100%;
+    height: auto;
 }
 
 h1 {
-  padding-top: 30px;  
-
+    padding-top: 30px;
 }
 
 .wrapper {
-  margin: 0;
-  padding: 0;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-/* HEADER */
+
+/* =========================
+   HEADER
+========================= */
+
 header {
-  padding: 20px 20px 0 20px;
-  position: fixed;
-  top: 0;
-  display: grid;  
-  grid-gap:5px;
-  grid-template-columns: 1fr 4fr 1fr;
-  grid-template-areas: 
-   "nt mn mn sb . . . "; 
-  background-color: var(--primary);
-  width: 100%;
-  margin-bottom: 0px;  
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas:
+        "nt mn sb";
+    background-color: var(--primary);
+    z-index: 999;
 }
 
 .netflixLogo {
-  grid-area: nt;
-  object-fit: cover;
-  width: 100px;
-  max-height: 100%;
-  
-  padding-left: 30px;
-  padding-top: 0px;  
+    grid-area: nt;
+    object-fit: cover;
+    width: 100px;
+    max-width: 100%;
+    max-height: 100%;
+    padding-left: 30px;
+    padding-top: 0;
 }
 
-.netflixLogo img {  
-  height: 36px;
-  width: 106px;     
+.netflixLogo img {
+    height: 36px;
+    width: 106px;
+    max-width: 100%;
 }
 
 #logo {
-  color: #E50914;  
-  margin: 10px; 
-  padding: 0; 
+    color: #E50914;
+    margin: 10px;
+    padding: 0;
 }
 
-
 .main-nav {
-  grid-area: mn;
-  padding: 0 40px 0 100px;
+    grid-area: mn;
+    padding: 0 40px 0 50px;
+    min-width: 0;
 }
 
 .main-nav a {
-  color: var(--light);
-  text-decoration: none;
-  margin: 20px;  
+    color: var(--light);
+    text-decoration: none;
+    margin: 20px;
 }
 
 .main-nav a:hover {
-  color: var(--dark);
+    color: var(--dark);
 }
 
 .sub-nav {
-  grid-area: sb;
-  padding: 0 40px 0 40px;
+    grid-area: sb;
+    padding: 0 20px;
+    white-space: nowrap;
 }
 
 .sub-nav a {
-  color: var(--light);
-  text-decoration: none;
-  margin: 5px;
-  margin: 20px;  
-
+    color: var(--light);
+    text-decoration: none;
+    margin: 20px;
 }
 
 .sub-nav a:hover {
-  color: var(--dark);
+    color: var(--dark);
 }
 
 
+/* =========================
+   MAIN CONTAINER
+========================= */
 
-
-
-/* MAIN CONTIANER */
 .main-container {
-  /* padding: 50px; */
-  display: flex;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    min-width: 0;
 }
 
-.headings{
-  
-  width: 300px;
-  color: #f44336; /* Red heading */
-  padding-left: 20px;
-  padding-top: 0px; 
+.headings {
+    padding-left: 30px;
+    text-align: left;
+    padding-top: 0;
+    max-width: 100%;
 }
-/* adding text on the experience card */
+
+
+/* =========================
+   EXPERIENCE CARD TEXT
+========================= */
+
+.cardtext1,
+.cardtext2,
+.cardtext3,
+.cardtext4,
+.cardtext5 {
+    position: absolute;
+    font-size: 18px;
+    max-width: 90%;
+}
+
 .cardtext1 {
-  position: absolute;
-  top: 890px;
-  left: 90px;
-  font-size: 18px;
-  /* background-color: #E50914; */
+    top: 890px;
+    left: 90px;
 }
 
 .cardtext2 {
-  position: absolute;
-  top: 890px;
-  left: 390px;
-  font-size: 18px;
-  /* background-color: #E50914; */
+    top: 890px;
+    left: 390px;
 }
+
 .cardtext3 {
-  position: absolute;
-  top: 890px;
-  left: 750px;
-  font-size: 18px;
+    top: 890px;
+    left: 750px;
 }
+
 .cardtext4 {
-  position: absolute;
-  top: 890px;
-  left: 1090px;
-  font-size: 18px;
+    top: 890px;
+    left: 1090px;
 }
+
 .cardtext5 {
-  position: absolute;
-  top: 890px;
-  left: 1300px;
-  font-size: 18px;
+    top: 890px;
+    left: 1300px;
 }
+
+
+/* =========================
+   BOX
+========================= */
+
 .box {
-  display: grid;
-  background-color: rgba(0, 0, 0, 0.4);
-  grid-gap: 10px;
-  grid-template-columns: repeat(6, minmax(100px, 1fr));
-  padding-left: 30px;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    overflow: visible;
+    min-width: 0;
 }
 
-.box a {
-  transition: transform .3s;  
-}
-
-.box a:hover {
-  transition: transform .3s;
-  -ms-transform: scale(1.4);
-  -webkit-transform: scale(1.4);  
-  transform: scale(1.4);
-  filter: brightness(0.7)
-}
-
+.box a,
 .box img {
-  border-radius: 2px;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s, z-index 0s;
 }
 
-/* LINKS */
+.box a:hover,
+.box img:hover {
+    transform: scale(1.05);
+    z-index: 999;
+    filter: brightness(0.7);
+}
+
+
+/* =========================
+   LINKS
+========================= */
+
 .link {
-  padding: 50px;
+    padding: 50px;
+    max-width: 100%;
 }
 
 .sub-links ul {
-  list-style: none;
-  padding: 10px;
-  display: block;
-  grid-template-columns: repeat(3, 0.6fr);
-  display: grid;  
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 0.6fr);
+    gap: 10px;
 }
 
 .sub-links a {
-  color: var(--dark);
-  text-decoration: none;
+    color: var(--dark);
+    text-decoration: none;
 }
 
 .sub-links a:hover {
-  color: var(--dark);
-  text-decoration: underline;
+    color: var(--dark);
+    text-decoration: underline;
 }
 
-.logos a{
-  padding: 10px;
+.logos a {
+    padding: 10px;
 }
 
 .logo {
-  color: var(--dark);
+    color: var(--dark);
 }
 
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
+
 footer {
-  padding: 0px;
-  text-align: center;
-  color: var(--dark);
-  margin: 0px;
-}
-
-
-/* project card styling */
- /* Container for all project cards */
- .projects-container1 {
-  display: grid;
-  background-color: rgba(0, 0, 0, 0.4);
-  grid-gap: 10px; 
-  grid-template-columns: repeat(5, 0.6fr);
-  /* grid-template-columns: repeat(3, minmax(100px, 1fr)); */
-  padding-left: 30px;
-}
-
-/* Individual Project Card Styling */
-.project-card1 {
-  background: #1e1e1e;
-  border-radius: 10px;
-  padding: 1.5rem;
-  /* box-shadow: 0 0 10px rgba(255, 0, 0, 0.3); Red glow effect */
-  transition: transform 0.3s ease;
-}
-
-/* Hover effect on cards */
-.project-card1:hover {
-  transform: translateY(-5px);
-}
-
-/* Card Title */
-.project-card1 h3 {
-  color: #f44336; /* Red heading */
-  margin-top: 10;
-}
-
-/* Card Description */
-.project-card1 p {
-  color: #ddd;
-  font-size: 0.95rem;
-}
-
-/* Tech Badges Container */
-.badges1 {
-  margin-top: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-/* Individual Badge Styling */
-.badges1 span {
-  background-color: #333;
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  border: 1px solid #888;
-}
-
-
-/* MEDIA QUERIES */
-
-@media(max-width: 900px) {
-
-  header {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: 
-    "nt nt nt  .  .  . sb . . . "
-    "mn mn mn mn mn mn  mn mn mn mn";
-  }
-
-  .box {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(4, minmax(100px, 1fr));
-  }
-
-}
-
-@media(max-width: 700px) {
-
-  header {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: 
-    "nt nt nt  .  .  . sb . . . "
-    "mn mn mn mn mn mn  mn mn mn mn";
-  }
-
-  .box {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(3, minmax(100px, 1fr));
-  }
-
-  .sub-links ul {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(3, 1fr);
-  }
-   
-}
-
-@media(max-width: 500px) {
-
-  .wrapper {
-    font-size: 15px;
-  }
-
-  header {
+    padding: 0;
+    text-align: center;
+    color: var(--dark);
     margin: 0;
-    padding: 20px 0 0 0;
-    position: static;
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-areas: 
-    "nt"    
-    "mn"
-    "sb";
-    text-align: center;
-  }
-
-  .netflixLogo {
+    width: 100%;
     max-width: 100%;
-    margin: auto;
-    padding-right: 20px;
-  }
+}
 
-  .main-nav {
+
+/* =========================
+   HERO
+========================= */
+
+.heros12 {
+    width: 100%;
+    max-width: 100%;
+    min-height: 350vh;
+
+    background:
+        linear-gradient(
+            to right,
+            #e50914 0%,
+            #000000 25%,
+            #000000 75%,
+            #e50914 100%
+        );
+
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   PROJECT CONTAINER
+========================= */
+
+.projects-container1 {
+    width: 100%;
+    max-width: 100%;
+
     display: grid;
-    grid-gap: 0px;
-    grid-template-columns: repeat(1, 1fr);
-    text-align: center;
-  }
 
-  h1 {
-    text-align: center;
-    font-size: 18px;
-  }
+    background-color: rgba(0, 0, 0, 0.4);
 
- 
+    gap: 10px;
 
-  .box {
+    grid-template-columns:
+        repeat(5, minmax(0, 1fr));
+
+    padding: 0 30px;
+
+    min-width: 0;
+}
+
+
+/* =========================
+   SKILLS CONTAINER
+========================= */
+
+.skills-container1 {
+    width: 100%;
+    max-width: 100%;
+
     display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(1, 1fr);
-    text-align: center;    
-  }
 
-  .box a:hover {
-    transition: transform .3s;
-    -ms-transform: scale(1);
-    -webkit-transform: scale(1);  
-    transform: scale(1.2);
-  }
+    background-color: rgba(0, 0, 0, 0.4);
 
-  .logos {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(2, 1fr);
-    text-align: center;
-  }
+    gap: 20px;
 
-  .sub-links ul {
-    display: contents;
-    grid-gap: 20px;
-    grid-template-columns: repeat(1, 1fr);
-    text-align: center;
-    font-size: 15px;
-  }
+    grid-template-columns:
+        repeat(6, minmax(0, 1fr));
 
-  
+    padding: 0 30px;
+
+    min-width: 0;
+}
+
+
+/* =========================
+   PROJECT CARD
+========================= */
+
+.project-card1 {
+    background: #1e1e1e;
+    border-radius: 10px;
+    padding: 1.5rem;
+
+    position: relative;
+
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    transition: transform 0.3s ease;
+}
+
+.project-card1:hover {
+    transform: translateY(-5px);
+}
+
+
+/* =========================
+   SKILL CARD
+========================= */
+
+.skill-card1 {
+    background: #1e1e1e;
+    border-radius: 10px;
+
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    transition: transform 0.3s ease;
+}
+
+.skill-card1:hover {
+    transform: translateY(-5px);
+}
+
+
+/* =========================
+   CARD CONTENT
+========================= */
+
+.project-card1 h3 {
+    color: #f44336;
+    margin-top: 10px;
+}
+
+.skill-card1 h3 {
+    color: #f44336;
+    margin-top: 10px;
+}
+
+.project-card1 p {
+    color: #ddd;
+    font-size: 0.95rem;
+    overflow-wrap: break-word;
+}
+
+.skill-card1 p {
+    color: #ddd;
+    font-size: 0.95rem;
+    overflow-wrap: break-word;
+}
+
+
+/* =========================
+   CERTIFICATE IMAGE
+========================= */
+
+.certiimg {
+    height: 175px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+
+/* =========================
+   SKILL IMAGE
+========================= */
+
+.skill-img-card {
+    height: 30px;
+    width: 270px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+
+/* =========================
+   BADGES
+========================= */
+
+.badges1 {
+    margin-top: 1rem;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    max-width: 100%;
+}
+
+.badges1 span {
+    background-color: #333;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    border: 1px solid #888;
+
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
+
+/* =========================
+   CAROUSEL WRAPPER
+========================= */
+
+.carousel-wrapper {
+    width: 100%;
+    max-width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    min-width: 0;
+}
+
+
+/* =========================
+   CAROUSEL
+========================= */
+
+.carousel {
+    position: relative;
+
+    width: min(700px, 100%);
+    max-width: 100%;
+
+    height: 420px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 0;
+}
+
+
+/* =========================
+   CAROUSEL CARD
+========================= */
+
+.card {
+    position: absolute;
+
+    width: 300px;
+    max-width: 90%;
+
+    height: 400px;
+    max-height: 90%;
+
+    background: #4bbfdc;
+    color: white;
+
+    font-size: 48px;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 30px;
+
+    transition: all 0.6s ease;
+}
+
+
+/* =========================
+   MEDIA QUERIES
+========================= */
+
+
+/* ---------- 900px ---------- */
+
+@media (max-width: 900px) {
+
+    header {
+        display: grid;
+
+        grid-template-columns: 1fr auto;
+        grid-template-areas:
+            "nt sb"
+            "mn mn";
+
+        gap: 20px;
+
+        padding: 20px;
+    }
+
+    .main-nav {
+        padding: 0;
+        min-width: 0;
+    }
+
+    .main-nav a {
+        margin: 10px;
+    }
+
+    .projects-container1 {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        padding: 0 20px;
+    }
+
+    .skills-container1 {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        padding: 0 20px;
+    }
+
+    .cardtext1,
+    .cardtext2,
+    .cardtext3,
+    .cardtext4,
+    .cardtext5 {
+        position: static;
+        margin: 10px 0;
+    }
+}
+
+
+/* ---------- 700px ---------- */
+
+@media (max-width: 700px) {
+
+    header {
+        grid-template-columns: 1fr auto;
+
+        grid-template-areas:
+            "nt sb"
+            "mn mn";
+
+        gap: 15px;
+
+        padding: 15px;
+    }
+
+    .netflixLogo {
+        padding-left: 0;
+        width: 90px;
+    }
+
+    .main-nav {
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .main-nav a {
+        margin: 5px;
+    }
+
+    .sub-nav {
+        padding: 0;
+    }
+
+    .sub-links ul {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 20px;
+    }
+
+    .projects-container1 {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        padding: 0 15px;
+    }
+
+    .skills-container1 {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        padding: 0 15px;
+    }
+
+    .card {
+        width: 280px;
+        height: 360px;
+        font-size: 36px;
+    }
+}
+
+
+/* ---------- 500px ---------- */
+
+@media (max-width: 500px) {
+
+    .wrapper {
+        width: 100%;
+        max-width: 100%;
+        font-size: 15px;
+    }
+
+    header {
+        position: static;
+
+        width: 100%;
+        max-width: 100%;
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        grid-template-areas:
+            "nt"
+            "mn"
+            "sb";
+
+        gap: 20px;
+
+        padding: 20px 10px;
+
+        text-align: center;
+    }
+
+    .netflixLogo {
+        max-width: 100%;
+        width: 106px;
+
+        margin: auto;
+        padding: 0;
+    }
+
+    .netflixLogo img {
+        width: 106px;
+        max-width: 100%;
+    }
+
+    .main-nav {
+        width: 100%;
+        max-width: 100%;
+
+        display: flex;
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        padding: 0;
+        gap: 5px;
+    }
+
+    .main-nav a {
+        margin: 5px;
+    }
+
+    .sub-nav {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .sub-nav a {
+        margin: 5px;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .projects-container1 {
+        grid-template-columns:
+            minmax(0, 1fr);
+
+        padding: 0 15px;
+    }
+
+    .skills-container1 {
+        grid-template-columns:
+            minmax(0, 1fr);
+
+        padding: 0 15px;
+    }
+
+    .project-card1 {
+        padding: 1rem;
+    }
+
+    .skill-card1 {
+        padding: 1rem;
+    }
+
+    .logos {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 20px;
+
+        text-align: center;
+    }
+
+    .sub-links ul {
+        display: grid;
+
+        grid-template-columns:
+            minmax(0, 1fr);
+
+        gap: 20px;
+
+        padding: 10px;
+
+        text-align: center;
+
+        font-size: 15px;
+    }
+
+    .carousel {
+        width: 100%;
+        height: 400px;
+    }
+
+    .card {
+        width: 250px;
+        height: 330px;
+        font-size: 30px;
+        border-radius: 20px;
+    }
+
+    .link {
+        padding: 30px 15px;
+    }
 }

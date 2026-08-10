@@ -7,19 +7,21 @@ function Head() {
   return (
     <header>
     <div class="netflixLogo">
-      <a id="logo" href="#home"><img src={logo} alt="Logo Image"/></a>
+      <Link id="logo" to={'/home'}><img src={logo} alt="Logo Image"/></Link>
     </div>      
     <nav class="main-nav"> 
-      <Link to={'/home'}>Home</Link>               
-      <a href="#about">About</a>
-      <a href="#movies">Skills</a>
-      <a href="#originals">Projects</a>
-      <a href="#">Contact me</a>
+      <Link to={'/home'}>Home</Link>  
+      <Link to={'/about'}>About</Link>              
+      <Link to={'/skills'}>Skills</Link>
+      <Link to={'/project'}>Projects</Link>
+      <Link to={'/contactme'}>Contact me</Link>
+      {/* <a href="#movies">Skills</a> */}
+      {/* <a href="#">Contact me</a> */}
     </nav>
     <nav class="sub-nav">
       <a href="#"><i class="fas fa-search sub-nav-logo"></i></a>
-      <a href="#"><i class="fas fa-bell sub-nav-logo"></i></a>
-      <Link to={'/index'}><img id='accountrec' src={rec} alt="recuiter" /></Link>
+      {/* <a href="#"><i class="fas fa-bell sub-nav-logo"></i></a> */}
+      <Link to={'/login'}><img id='accountrec' src={rec} alt="recuiter" /></Link>
         
     </nav>      
   </header>

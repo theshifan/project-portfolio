@@ -1,7 +1,7 @@
 import React from 'react';
-import './HeroSection.css';
-import dev from '../assets/images/Developer.jpeg'
-import logo from '../assets/images/shifanlogo.png'
+import './css/HeroSection.css';
+import dev from '../../assets/images/Developer.jpeg'
+import logo from '../../assets/images/shifanlogo.png'
 import { Link } from 'react-router-dom';
 
 
@@ -16,7 +16,8 @@ function DevopHeros() {
     <nav class="main-nav"> 
       <Link to={'/home'}>Home</Link>               
       <a href="#about">About</a>
-      <a href="#movies">Skills</a>
+      <Link to={'/skills'}>Skills</Link>
+      {/* <a href="#movies">Skills</a> */}
       <a href="#originals">Projects</a>
       <a href="#">Contact me</a>
     </nav>
