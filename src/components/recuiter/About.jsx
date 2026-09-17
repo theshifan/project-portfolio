@@ -3,7 +3,7 @@ import Head from '../Head';
 import Footer from '../Footers';
 import Links from '../Links';
 
-import Shifan from '../../assets/images/recuiter/Experience.png';
+import Shifan from '../../assets/images/Shifan.jpeg';
 import './css/about.css'
 function About() {
 
