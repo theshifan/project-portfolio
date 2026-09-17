@@ -21,7 +21,7 @@ function Head() {
     <nav class="sub-nav">
       <a href="#"><i class="fas fa-search sub-nav-logo"></i></a>
       {/* <a href="#"><i class="fas fa-bell sub-nav-logo"></i></a> */}
-      <Link to={'/login'}><img id='accountrec' src={rec} alt="recuiter" /></Link>
+      <Link to={'/'}><img id='accountrec' src={rec} alt="recuiter" /></Link>
         
     </nav>      
   </header>

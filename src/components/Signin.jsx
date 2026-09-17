@@ -21,19 +21,19 @@ function Signin() {
       <div className={styles.profiles}>
 
         <div className={styles.profile} onClick={handleProfileClick}>
-          <Link to={"/head"}><img src={recuriter} alt="Recruiter" /></Link>
+          <Link to={"/home"}><img src={recuriter} alt="Recruiter" /></Link>
           <p>Recruiter</p>
         </div>
         <div className={styles.profile} >
-          <Link to={"/head"}><img src={Deve} alt="Developer" /></Link>
+          <Link to={"/home"}><img src={Deve} alt="Developer" /></Link>
           <p>Developer</p>
         </div>
         <div className={styles.profile} onClick={handleProfileClick}>
-          <Link to={"/head"}><img src={Stalk} alt="Stalker" /></Link>
+          <Link to={"/home"}><img src={Stalk} alt="Stalker" /></Link>
           <p>Stalker</p>
         </div>
         <div className={styles.profile} onClick={handleProfileClick}>
-          <Link to={Head}><img src={advent} alt="Explorer" /> </Link>
+          <Link to={"/home"}><img src={advent} alt="Explorer" /> </Link>
           <p>Explorer</p>
         </div>
       </div>

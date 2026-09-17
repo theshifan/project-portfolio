@@ -20,11 +20,11 @@ function Experience() {
             id: 1,
             company: 'Aleemama',
             image: aleemama,
-            role: 'Founder & Software Developer',
-            location: 'Kannur, Kerala, India',
+            role: 'Software Developer',
+            location: 'Freelqnce',
             date: 'February 2026 – August 2026',
             description: [
-                'I’m currently working on my own business, aleeMAMA, where I’m involved in both the technical and business side. On the technical side, I’m building and managing the company’s web presence and digital systems, while also working on improving the customer experience. Since I’m directly involved with the business, I work closely with customers to understand their requirements and use that feedback to improve our products and services. I also handle digital marketing, social media, product promotion, and other day-to-day operations. This experience has taught me how to take ownership of a project, understand real customer requirements, and turn those requirements into practical solutions'
+                'I’m currently working with a business, aleeMAMA, where I’m involved in both the technical and business side. On the technical side, I’m building and managing the company’s web presence and digital systems, while also working on improving the customer experience. Since I’m directly involved with the business, I work closely with customers to understand their requirements and use that feedback to improve our products and services. I also handle digital marketing, social media, product promotion, and other day-to-day operations. This experience has taught me how to take ownership of a project, understand real customer requirements, and turn those requirements into practical solutions'
             ]
         },
 

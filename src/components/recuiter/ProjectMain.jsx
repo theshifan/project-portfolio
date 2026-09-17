@@ -3,27 +3,34 @@ import React from 'react';
 import Canteen from '../../assets/images/project/foodtocken.jpg';
 import brest from '../../assets/images/project/brestcancer2.jpg';
 import food from '../../assets/images/project/food.png';
-import move from '../../assets/images/project/moveit.png';
+import alee from '../../assets/images/project/aleemama.png';
 
 import Head from '../Head';
 import Footers from '../Footers';
 
 function ProjectMain() {
     const projects = [
-        {
-            image: Canteen,
-            title: 'Food Token',
+         {
+            image: alee,
+            title: 'aleeMAMA e-comerce website',
             description:
-                'A food token management system designed to simplify food ordering and token management.',
-            technologies: ['React', 'Python', 'Django'],
+                'Developed a responsive e-commerce website for aleeMAMA, a natural food brand, using React.js. The website showcases nutritional food products, recipes, and brand information, with features like product browsing, shopping cart, and a user-friendly interface.',
+            technologies: ['React.js'],
         },
-        {
-            image: brest,
-            title: 'Breast Cancer Detection',
-            description:
-                'A machine learning project focused on breast cancer detection and classification.',
-            technologies: ['Python', 'Machine Learning'],
-        },
+        // {
+        //     image: Canteen,
+        //     title: 'Food Token for Canteen',
+        //     description:
+        //         'A food token management system designed to simplify food ordering and token management.',
+        //     technologies: ['React', 'Python', 'Django'],
+        // },
+        // {
+        //     image: brest,
+        //     title: 'Breast Cancer Detection',
+        //     description:
+        //         'A machine learning project focused on breast cancer detection and classification.',
+        //     technologies: ['Python', 'Machine Learning'],
+        // },
         {
             image: food,
             title: 'Food Application',
@@ -31,20 +38,20 @@ function ProjectMain() {
                 'A web application designed to provide a simple and user-friendly food ordering experience.',
             technologies: ['React', 'JavaScript', 'CSS'],
         },
-        {
-            image: move,
-            title: 'Move It',
-            description:
-                'A project focused on providing a simple platform for managing moving and delivery services.',
-            technologies: ['React', 'JavaScript'],
-        },
+        // {
+        //     image: move,
+        //     title: 'Move It',
+        //     description:
+        //         'A project focused on providing a simple platform for managing moving and delivery services.',
+        //     technologies: ['React', 'JavaScript'],
+        // },
     ];
 
     return (
         <>
             <Head />
 
-            <main className="projects-page">
+            <main style={{"top":"20px"}}>
                 <section className="heros12">
 
                     <div className="projects-header">
