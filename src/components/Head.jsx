@@ -1,9 +1,23 @@
 import React from 'react'
 import logo from '../assets/images/shifanlogo.png'
 import rec from "../assets/images/recuiter.jpeg"
-import { Link } from 'react-router-dom'
+import Developer from "../assets/images/Developer.jpeg"
+import { Link, useLocation } from 'react-router-dom'
 
 function Head() {
+    const location = useLocation();
+
+  const role = location.state?.role || 'recruiter';
+
+  const image = {
+    recruiter: rec,
+    developer: Developer,
+    // stalker: Stalker,
+    // explorer: Explorer
+  };
+
+  const selectedpic = image[role] || Recuiter;
+
   return (
     <header>
     <div class="netflixLogo">
@@ -21,7 +35,7 @@ function Head() {
     <nav class="sub-nav">
       <a href="#"><i class="fas fa-search sub-nav-logo"></i></a>
       {/* <a href="#"><i class="fas fa-bell sub-nav-logo"></i></a> */}
-      <Link to={'/'}><img id='accountrec' src={rec} alt="recuiter" /></Link>
+      <Link to={'/'}><img id='accountrec' src={selectedpic} alt="recuiter" /></Link>
         
     </nav>      
   </header>

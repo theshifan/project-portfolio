@@ -12,6 +12,7 @@ import About from './components/recuiter/About'
 import Test from './components/Test'
 import Contact from './components/Contact'
 import Experience from './components/recuiter/Experience'
+import ProjectDetails from './components/recuiter/ProjectDetails'
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path='/contactme' element={<Contact></Contact>}></Route>
         <Route path='/test' element={<Test></Test>}></Route>
         <Route path='/Experience' element={<Experience></Experience>}></Route>
+        <Route path="/projects/:projectId" element={<ProjectDetails></ProjectDetails >}></Route>
       </Routes>
     </BrowserRouter>  
   );

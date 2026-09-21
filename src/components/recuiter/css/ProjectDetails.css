@@ -1,0 +1,508 @@
+.pd-page {
+    background: #000;
+    color: #fff;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.pd-hero {
+    position: relative;
+    min-height: 720px;
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: flex-end;
+}
+
+.pd-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.95) 0%,
+            rgba(0, 0, 0, 0.78) 30%,
+            rgba(0, 0, 0, 0.35) 65%,
+            rgba(0, 0, 0, 0.15) 100%
+        ),
+        linear-gradient(
+            to top,
+            #000 0%,
+            transparent 45%
+        );
+}
+
+
+.pd-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 650px;
+
+    padding: 120px 7% 100px;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.pd-series {
+    font-size: 14px;
+    font-weight: 700;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 20px;
+}
+
+
+.pd-title {
+    font-size: clamp(42px, 6vw, 82px);
+
+    line-height: 0.95;
+
+    margin: 0 0 25px;
+
+    font-weight: 800;
+
+    max-width: 700px;
+}
+
+
+.pd-meta {
+    display: flex;
+
+    gap: 20px;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+
+    font-size: 15px;
+
+    color: #d0d0d0;
+}
+
+
+.pd-match {
+    font-weight: 700;
+}
+
+
+.pd-description {
+    max-width: 600px;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    color: #ddd;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.pd-buttons {
+    display: flex;
+
+    gap: 12px;
+}
+
+
+.pd-buttons button {
+    border: none;
+
+    padding: 13px 24px;
+
+    border-radius: 4px;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    transition: 0.25s ease;
+}
+
+
+.pd-play {
+    background: #fff;
+
+    color: #000;
+}
+
+
+.pd-play:hover {
+    background: #dcdcdc;
+}
+
+
+.pd-list {
+    background: rgba(100, 100, 100, 0.75);
+
+    color: #fff;
+}
+
+
+.pd-list:hover {
+    background: rgba(130, 130, 130, 0.9);
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.pd-navigation {
+    display: flex;
+
+    gap: 40px;
+
+    padding: 0 7%;
+
+    height: 70px;
+
+    align-items: center;
+
+    border-bottom: 1px solid #222;
+
+    background: #050505;
+}
+
+
+.pd-navigation button {
+    background: none;
+
+    border: none;
+
+    color: #888;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    height: 70px;
+
+    position: relative;
+}
+
+
+.pd-navigation button:hover {
+    color: #fff;
+}
+
+
+.pd-navigation .pd-nav-active {
+    color: #fff;
+}
+
+
+.pd-navigation .pd-nav-active::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 0;
+
+    right: 0;
+
+    height: 3px;
+
+    background: #fff;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.pd-section {
+    display: grid;
+
+    grid-template-columns: 30% 70%;
+
+    gap: 50px;
+
+    padding: 90px 7%;
+
+    border-bottom: 1px solid #1b1b1b;
+}
+
+
+.pd-section-left {
+    padding-top: 5px;
+}
+
+
+.pd-label {
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    font-weight: 700;
+
+    color: #888;
+
+    margin-bottom: 15px;
+}
+
+
+.pd-section h2 {
+    font-size: 35px;
+
+    margin: 0;
+
+    font-weight: 700;
+}
+
+
+.pd-section-right {
+    max-width: 750px;
+}
+
+
+.pd-section-right > p {
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    color: #bdbdbd;
+
+    margin: 0 0 25px;
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.pd-features {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+
+.pd-feature {
+    border: 1px solid #222;
+
+    padding: 25px;
+
+    min-height: 120px;
+}
+
+
+.pd-feature span {
+    font-size: 12px;
+
+    color: #777;
+
+    font-weight: 700;
+}
+
+
+.pd-feature p {
+    margin: 20px 0 0;
+
+    font-size: 16px;
+
+    color: #ddd;
+}
+
+
+/* =========================
+   TECHNOLOGIES
+========================= */
+
+.pd-technologies {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+
+.pd-technologies span {
+    border: 1px solid #333;
+
+    padding: 12px 20px;
+
+    border-radius: 3px;
+
+    color: #ddd;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.pd-back {
+    padding: 60px 7%;
+}
+
+
+.pd-back button {
+    background: none;
+
+    border: none;
+
+    color: #aaa;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+
+.pd-back button:hover {
+    color: #fff;
+}
+
+
+/* =========================
+   NOT FOUND
+========================= */
+
+.pd-not-found {
+    min-height: 70vh;
+
+    background: #000;
+
+    color: #fff;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+.pd-not-found button {
+    padding: 12px 20px;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .pd-hero {
+        min-height: 650px;
+
+        background-position: center;
+    }
+
+
+    .pd-content {
+        padding: 100px 25px 70px;
+    }
+
+
+    .pd-title {
+        font-size: 45px;
+    }
+
+
+    .pd-description {
+        font-size: 15px;
+    }
+
+
+    .pd-navigation {
+        gap: 20px;
+
+        padding: 0 25px;
+
+        overflow-x: auto;
+
+        white-space: nowrap;
+    }
+
+
+    .pd-section {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        padding: 60px 25px;
+    }
+
+
+    .pd-section h2 {
+        font-size: 28px;
+    }
+
+
+    .pd-features {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .pd-title {
+        font-size: 38px;
+    }
+
+
+    .pd-meta {
+        gap: 12px;
+
+        flex-wrap: wrap;
+    }
+
+
+    .pd-buttons {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .pd-buttons button {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+}

@@ -3,6 +3,7 @@ import Exp from '../../assets/images/recuiter/Experience.png'
 import certi from '../../assets/images/recuiter/certificates.png'
 import proj from '../../assets/images/recuiter/Project.png'
 import skill from '../../assets/images/recuiter/skills1.png'
+import educ from '../../assets/images/recuiter/Education.png'
 import recom from '../../assets/images/recuiter/recomnd.png'
 import { Link } from 'react-router-dom'
 
@@ -22,6 +23,9 @@ function Maincontainer() {
           {/* <div className='cardtext3'><h1>Project</h1></div> */}
           
           <Link to={'/skills'}><img className='certiimg'src={skill} alt=""  style={{ "height":"175px","width":"270px","filter": "brightness(0.9)"}}/></Link>
+
+           <Link to={'/skills'}><img className='certiimg'src={educ} alt=""  style={{ "height":"175px","width":"270px","filter": "brightness(0.9)"}}/></Link>
+          
           
           {/* <div className='cardtext4'><h1>Skills</h1></div> */}
           {/* <a href=""><img src={recom} alt="" style={{ "height":"175px","width":"270px","filter": "brightness(0.9)"}}/></a> */}

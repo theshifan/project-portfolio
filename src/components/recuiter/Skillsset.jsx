@@ -8,6 +8,7 @@ import html from '../../assets/images/skills/Html.png';
 import CSS from '../../assets/images/skills/CSS.png';
 import JS from '../../assets/images/skills/JS.png';
 import sqls from '../../assets/images/skills/SQLpic.png';
+import SQLAlchamy from '../../assets/images/skills/SQLAlchemy.png'
 
 import Head from '../Head';
 import Footers from '../Footers';
@@ -34,6 +35,10 @@ function Skillsset() {
         {
             image: sqls,
             name: 'SQL'
+        },
+        {   
+            image:SQLAlchamy,
+            name: 'SQLAlchamy'
         },
         {
             image: DjRest,
